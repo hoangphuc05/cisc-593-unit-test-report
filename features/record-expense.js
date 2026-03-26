@@ -41,7 +41,7 @@ const recordExpenseEndpoint = (db) => (req, res) => {
     category: dataObject.category ?? null,
     date: dataObject.date,
     description: dataObject.description ?? null,
-    group_id: dataObject.group ?? null,
+    group_id: dataObject.group,
   });
 
   res.status(201).json({ id: result.lastInsertRowid, message: 'Expense recorded successfully!' });
